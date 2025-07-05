@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvertPDF</title>
+</head>
+<body>
+    <header>
+     <h1>ConvertPDF</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>    
+    </header>
+    <main>
+        <h2>Bem-vindo ao ConvertPDF</h2>
+        <p>Converta seus arquivos para PDF ou vice e versa de forma prática e segura.</p>
+    </main>
+    <article>
+        <figure>
+            <img src="titulofoto.png" alt="Exemplo de Conversão" width="300" height="100">
+        </figure><br>
+        <!---aqui eu to criando a parte de conversao do site-->
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="fileInput">Selecione um arquivo para conversão:</label>
+            <input type="file" id="fileInput" accept=".pdf,.docx,.txt,.xls,.xlsm,.xlsb,.csv,.ods,.xlsx,.odp,.pptx,.ppt,.ppsx,.xps,.pptm" multiple><br><br>
+            <p id="status1"></p>
+        </form>
+        <p>Selecione um arquivo e escolha o formato de saída desejado. Clique no botão "converter" para iniciar o processo.</p>
+        <label for="outputFormat">Escolha o formato de saída:</label>
+        <select id="outputFormat">
+            <option value="none">Selecione um formato</option>
+            <option value=".pdf">PDF</option>
+            <option value=".docx">DOCX</option>
+            <option value=".pptx">PPTX</option>
+            <option value=".xlsx">XLSX</option>
+        </select><br><br>
+        <input type="button" id="converterbutton" value="converter">
+        <!--aqui eu to criando o feedback visual do procedimento de conversao-->
+        <p id="status2"></p>
+        <p>O arquivo será convertido e você poderá baixá-lo em seguida.</p>
+    </article>
+
+    <p>Se precisar de ajuda, visite nossa <a href="contato.html">página de Contato</a>.</p>
+    <p>Para mais informações, visite nossa <a href="sobre.html">página Sobre</a> ou entre em contato conosco através da <a href="contato.html">página de Contato</a>.</p>
+    <footer>
+        <p>&copy; 2025 Convert. Todos os direitos reservados.</p>
+    <script src="main.js" defer></script>
+</body>
+</html>
